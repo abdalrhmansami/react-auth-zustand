@@ -4,7 +4,7 @@ const Home = () => {
   const loggedIn = useAuthStore((state: { loggedIn: any }) => state.loggedIn);
   return (
     <div>
-      <div>Home</div>
+      <div>Home page</div>
       <button onClick={() => loggedIn({ loggedIn: false })}>Logout</button>
     </div>
   );

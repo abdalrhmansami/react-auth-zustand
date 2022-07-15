@@ -1,7 +1,7 @@
 import { useAuthStore } from "../store/Store";
 
 const Home = () => {
-  const loggedIn = useAuthStore((state: any) => state.loggedIn);
+  const loggedIn = useAuthStore((state: { loggedIn: any }) => state.loggedIn);
   return (
     <div>
       <div>Home</div>

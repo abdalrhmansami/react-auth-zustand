@@ -3,7 +3,7 @@ import { devtools, persist } from "zustand/middleware";
 
 let authStore: any = (set: any) => ({
   user: { loggedIn: false },
-  loggedIn: (newState: any) =>
+  loggedIn: (newState: { loggedIn: boolean }) =>
     set(() => ({
       user: {
         loggedIn: newState.loggedIn,

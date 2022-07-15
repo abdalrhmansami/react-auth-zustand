@@ -4,7 +4,7 @@ import { useAuthStore } from "../store/Store";
 
 const Login = () => {
   const navigate = useNavigate();
-  const loggedIn = useAuthStore((state: any) => state.loggedIn);
+  const loggedIn = useAuthStore((state: { loggedIn: any }) => state.loggedIn);
 
   const userRef: any = useRef();
   const passwordRef: any = useRef();
@@ -15,6 +15,7 @@ const Login = () => {
       navigate("/");
     }
   };
+
   return (
     <div>
       <input placeholder="username" type="username" ref={userRef} />
